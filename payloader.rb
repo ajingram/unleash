@@ -395,7 +395,7 @@ def send_at_dummy
 end
 
 def content
-
+puts ""
 puts "Content has been added!"
 
   content_payload = "\"content\": [ {\"type\": \"text/html\", \"value\": \"<html><p>Hello, world!</p><img src=https://pbs.twimg.com/profile_images/1013810799347814401/Qm4aPvEh_400x400.jpg></img></html>\"}]"
