@@ -29,7 +29,6 @@ end
 
 def asm_dummy
 
-  puts ""
   puts "ASM has been added successfully!"
 
   #create asm payload
@@ -63,7 +62,6 @@ def batch
 end
 
 def batch_dummy
-  puts ""
   puts "A batch_id has been added successfully!"
 
   batch_id_payload = "\"batch_id\": \"YTk0NmUyODQtMWE2Yy0xMWU5LTg2NDYtNTI1NDAwZGQzN2EwLTc3ZmZhMTIzNQ\""
@@ -108,7 +106,6 @@ end
 
 def categories_dummy
 
-  puts ""
   puts "Categories have been added successfully!"  
   
   categories_payload = "\"categories\": [\"category1\",\"category2\",\"category3\"]"
@@ -154,7 +151,6 @@ end
 
 def custom_args_dummy
   
-  puts ""
   puts "Custom Arguments have been added successfully!"  
 
   arguments_payload = "\"custom_args\": {\"custom_arg1\" : \"value1\", \"custom_arg2\" : \"value2\", \"custom_arg3\" : \"value3\" }"
@@ -191,7 +187,6 @@ end
 
 def to_dummy
 
-  puts ""
   puts "The TO email has been added successfully!"
 
   to_payload = "\"to\": {\"email\": \"sendgridtesting@gmail.com\", \"name\": \"SendGrid Support\"}"
@@ -226,7 +221,6 @@ end
 
 def from_dummy
 
-  puts ""
   puts "The FROM email has been added successfully!"
 
 
@@ -263,7 +257,6 @@ end
 
 def reply_to_dummy
 
-  puts ""
   puts "The REPLY-TO email has been added successfully!"
 
   reply_to_payload = "\"reply_to\": {\"email\": \"noreply@sendgrid.com\", \"name\": \"Not Here\"}"
@@ -278,7 +271,6 @@ def reply_to_dummy
 end
 
 def ip_pool
-
   puts ""
   puts "Enter the IP pool name:"
   ip_pool_name = gets.chomp
@@ -296,7 +288,6 @@ end
 
 def ip_pool_dummy
 
-  puts ""
   puts "The IP Pool has been added successfully!"
 
   ip_pool_payload = "\"ip_pool_name\": \"marketing email pool\""
@@ -312,7 +303,6 @@ end
 
 
 def subject
-
   puts ""
   puts "Enter the subject line:"
   subject = gets.chomp
@@ -330,7 +320,6 @@ end
 
 def subject_dummy
 
-  puts ""
   puts "The Subject has been added successfully!"
   
   subject_payload = "\"subject\": \"This is a test message sent from SendGrid Support!\""
@@ -346,7 +335,6 @@ end
 
 
 def template
-
   puts ""
   puts "Enter the template_id:"
   template_id = gets.chomp
@@ -364,7 +352,6 @@ end
 
 def template_dummy
 
-  puts ""
   puts "A Template-id has been added successfully!"
 
   template_payload = "\"template_id\": \"d-751f9d5dd84f4edab77cf56edc65cd33\""
@@ -379,7 +366,6 @@ end
 
 
 def send_at
-
   puts ""
   puts "Enter the send time in EPOCH format:"
   send_at = gets.chomp
@@ -396,7 +382,6 @@ end
 
 def send_at_dummy
 
-  puts ""
   puts "A send_at time has been added!"
 
   send_at_payload = "\"send_at\": \"1547740424\""
@@ -411,7 +396,6 @@ end
 
 def content
 
-puts ""
 puts "Content has been added!"
 
   content_payload = "\"content\": [ {\"type\": \"text/html\", \"value\": \"<html><p>Hello, world!</p><img src=https://pbs.twimg.com/profile_images/1013810799347814401/Qm4aPvEh_400x400.jpg></img></html>\"}]"
@@ -431,12 +415,6 @@ def mail_settings
   choices = []
   mail_settings = ""
 
-  if mail_settings.empty?
-    puts "NOTHING IS HERE"
-  else
-    puts "CONTENT"
-  end
-
   puts ""
   puts "Which mail settings would you like to add?"
   puts "Enter in the number separated by commas for your selection (example: 1,4,5,10)"
@@ -448,6 +426,7 @@ def mail_settings
   puts "5. SPAM CHECK"
 
   userinput = gets.chomp
+  puts ""
   choices = userinput.split(/[\s,]+/)
 
   choices.each do | choice |
@@ -467,7 +446,6 @@ def mail_settings
     end
 
   elsif choice == "2"
-    puts ""
     puts "Bypass list management has been enabled successfully!"
 
     bypass_payload = "\"bypass_list_management\": { \"enable\": true}"
@@ -480,7 +458,6 @@ def mail_settings
     end
 
   elsif choice == "3"
-    puts ""
     puts "A footer has been enabled and added with dummy content!"
 
     footer_payload = "\"footer\": { \"enable\": true, \"html\": \"<p>This is a <br>test</br> footer.</p>}\", \"text\": \"This is your footer!\"}"
@@ -493,7 +470,6 @@ def mail_settings
     end
 
     elsif choice == "4"
-    puts ""
     puts "Sandbox mode has been enabled successfully!"
 
 
@@ -571,7 +547,6 @@ def mail_settings_dummy
 
   choices.each do | choice |
   if choice == "1"
-    puts ""
     puts "A BCC email has been added successfully!"
 
     bcc_payload = "\"bcc\": { \"email\": \"sendgridtesting@yahoo.com\", \"enable\": true }"
@@ -584,7 +559,6 @@ def mail_settings_dummy
       end
 
   elsif choice == "2"
-    puts ""
     puts "Bypass list management has been enabled successfully!"
 
     bypass_payload = "\"bypass_list_management\": { \"enable\": true}"
@@ -597,7 +571,6 @@ def mail_settings_dummy
       end
 
   elsif choice == "3"
-    puts ""
     puts "A footer has been added successfully!"
 
 
@@ -612,7 +585,6 @@ def mail_settings_dummy
     end
 
     elsif choice == "4"
-    puts ""
     puts "Sandbox mode has been enabled successfully!"
 
 
@@ -627,7 +599,6 @@ def mail_settings_dummy
 
     elsif choice == "5"
 
-    puts ""
     puts "Spam Check has been added successfully!"
     
   
@@ -675,7 +646,6 @@ def tracking_settings
   choices.each do | choice |
 
   if choice == "1"
-    puts ""
     puts "Click tracking has been enabled and added to the payload successfully!"
 
     click_payload = "\"click_tracking\": { \"enable_text\": true, \"enable\": true }"
@@ -688,7 +658,6 @@ def tracking_settings
     end
  
  elsif choice == "2"
-    puts ""
     puts "Open tracking has been enabled and added to the payload successfully!"
     puts ""
     puts "Do you want to add a substitution tag? (y/n)"
@@ -710,8 +679,7 @@ def tracking_settings
     end
 
    elsif choice == "3"
-    puts ""
-    puts "subscription tracking has been enabled and added to the payload successfully!"
+    puts "Subscription tracking has been enabled and added to the payload successfully!"
     puts ""
     puts "Do you want to add a substitution tag? (y/n)"
 
@@ -767,7 +735,6 @@ def tracking_settings_dummy
   choices.each do | choice |
 
   if choice == "1"
-    puts ""
     puts "Click tracking has been enabled and added to the payload successfully!"
 
     click_payload = "\"click_tracking\": { \"enable_text\": true, \"enable\": true }"
@@ -780,7 +747,6 @@ def tracking_settings_dummy
     end
  
  elsif choice == "2"
-    puts ""
     puts "Open tracking has been enabled and added to the payload successfully!"
 
     open_payload = "\"open_tracking\": { \"enable\": true, \"substitution_tag\": \"%my_sub_tag%\" }"
@@ -793,7 +759,6 @@ def tracking_settings_dummy
     end
 
    elsif choice == "3"
-    puts ""
     puts "subscription tracking has been enabled and added to the payload successfully!"
    
     subscription_payload = "\"subscription_tracking\": { \"enable\": true, \"html\": \"If you would like to unsubscribe and stop receiving these emails <% clickhere %>.\", \"text\": \"If you would like to unsubscribe and stop receiveing these emails <% click here %>.\", \"substitution_tag\": \"%my_sub_tag%\" }"
@@ -885,7 +850,7 @@ puts "14. TRACKING SETTINGS (open, click, subscription)"
 puts "15. PERSONALIZATION BLOCK"
 
 userinput = gets.chomp
-
+puts ""
 choices = userinput.split(/[\s,]+/)
 
 
