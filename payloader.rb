@@ -956,7 +956,7 @@ elsif @data_type == "2"
     elsif choice == "14"
       tracking_settings_dummy
       elsif choice == "15"
-        personalization_static
+        personalization_dummy
     else
       puts "ERROR: Selection was not found"
     end
